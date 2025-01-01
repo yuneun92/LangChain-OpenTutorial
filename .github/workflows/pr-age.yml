@@ -3,6 +3,9 @@ name: pr-age
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+  pull_request_review:
+    types: [submitted]
+    
 
 permissions:
   pull-requests: read
