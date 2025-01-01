@@ -27,10 +27,12 @@ This tutorial demonstrates how to use the `CommaSeparatedListOutputParser` to:
     - [Table of Contents](#table-of-contents)
     - [References](#references)
   - [Environment Setup](#environment-setup)
+  - [Implementing the Comma-Separated List Output Parser](#implementing-the-comma-separated-list-output-parser)
     - [Importing Required Modules](#importing-required-modules)
     - [Creating the Prompt Template](#creating-the-prompt-template)
     - [Integrating with ChatOpenAI and Running the Chain](#integrating-with-chatopenai-and-running-the-chain)
     - [Accessing Data with Python Indexing](#accessing-data-with-python-indexing)
+  - [Using Streamed Outputs](#using-streamed-outputs)
 
 ### References
 
@@ -91,7 +93,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 ```
-<pre class="custom">True</pre>## Implementing the Comma-Separated List Output Parser
+<pre class="custom">True</pre>
+
+## Implementing the Comma-Separated List Output Parser
 
 If you need to generate outputs in the form of a comma-separated list, the `CommaSeparatedListOutputParser` from LangChain simplifies the process. 
 
@@ -168,7 +172,10 @@ print("Last Landmark:", result[-1])
 <pre class="custom">First Landmark: Gyeongbokgung Palace
 Second Landmark: N Seoul Tower
 Last Landmark: Haeundae Beach
-</pre>## Using Streamed Outputs
+</pre>
+
+## Using Streamed Outputs
+
 For larger outputs or real-time feedback, you can process the results using the `stream` method. This allows you to handle data piece by piece as it is generated.
 
 ```python
