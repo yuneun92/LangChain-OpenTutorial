@@ -28,6 +28,9 @@ This tutorial demonstrates how to use the `CommaSeparatedListOutputParser` to:
     - [References](#references)
   - [Environment Setup](#environment-setup)
     - [Importing Required Modules](#importing-required-modules)
+    - [Creating the Prompt Template](#creating-the-prompt-template)
+    - [Integrating with ChatOpenAI and Running the Chain](#integrating-with-chatopenai-and-running-the-chain)
+    - [Accessing Data with Python Indexing](#accessing-data-with-python-indexing)
 
 ### References
 
@@ -90,8 +93,12 @@ load_dotenv()
 ```
 <pre class="custom">True</pre>## Implementing the Comma-Separated List Output Parser
 
-If you need to generate outputs in the form of a comma-separated list, the `CommaSeparatedListOutputParser` from LangChain simplifies the process. Below is a step-by-step implementation:
+If you need to generate outputs in the form of a comma-separated list, the `CommaSeparatedListOutputParser` from LangChain simplifies the process. 
+
+Below is a step-by-step implementation:
+
 ### Importing Required Modules
+
 Start by importing the necessary modules and initializing the `CommaSeparatedListOutputParser`. Retrieve the formatting instructions from the parser to guide the output structure.
 
 
@@ -106,7 +113,10 @@ format_instructions = output_parser.get_format_instructions()
 print(format_instructions)
 ```
 <pre class="custom">Your response should be a list of comma separated values, eg: `foo, bar, baz` or `foo,bar,baz`
-</pre>### Creating the Prompt Template
+</pre>
+
+### Creating the Prompt Template
+
 Define a `PromptTemplate` that dynamically generates a list of items. The placeholder subject will be replaced with the desired topic during execution.
 
 ```python
@@ -123,7 +133,10 @@ prompt = PromptTemplate(
 print(prompt)
 ```
 <pre class="custom">input_variables=['subject'] input_types={} partial_variables={'format_instructions': 'Your response should be a list of comma separated values, eg: `foo, bar, baz` or `foo,bar,baz`'} template='List five {subject}.\n{format_instructions}'
-</pre>### Integrating with ChatOpenAI and Running the Chain
+</pre>
+
+### Integrating with ChatOpenAI and Running the Chain
+
 Combine the `PromptTemplate`, `ChatOpenAI` model, and `CommaSeparatedListOutputParser` into a chain. Finally, run the chain with a specific `subject` to produce results.
 
 ```python
@@ -140,7 +153,10 @@ result = chain.invoke({"subject": "famous landmarks in South Korea"})
 print(result)
 ```
 <pre class="custom">['Gyeongbokgung Palace', 'N Seoul Tower', 'Bukchon Hanok Village', 'Seongsan Ilchulbong Peak', 'Haeundae Beach']
-</pre>### Accessing Data with Python Indexing
+</pre>
+
+### Accessing Data with Python Indexing
+
 Since the `CommaSeparatedListOutputParser` automatically formats the output as a Python list, you can easily access individual elements using indexing.
 
 ```python
