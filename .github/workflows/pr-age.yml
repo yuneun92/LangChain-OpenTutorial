@@ -2,7 +2,7 @@ name: pr-age
 
 on:
   schedule:
-    - cron: '32 16 * * *'
+    - cron: '34 07 * * *'
   pull_request:
     types: [opened, synchronize, reopened]
   pull_request_review:
