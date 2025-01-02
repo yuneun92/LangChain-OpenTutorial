@@ -25,14 +25,15 @@ jobs:
     - name: Install Dependencies
       run: pip install nbformat requests
 
-    - name: Extract PR Number
-      id: extract_pr
-      run: echo "GITHUB_PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+    - name: Configure Git Author
+      run: |
+        git config --global user.name "${{ github.event.pull_request.user.login }}"
+        git config --global user.email "${{ github.event.pull_request.user.login }}@users.noreply.github.com"
 
     - name: Update Colab, GitHub Links, and Peer Reviewers
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_PR_NUMBER: ${{ env.GITHUB_PR_NUMBER }}
+        GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
         GITHUB_REPOSITORY: ${{ github.repository }}
       run: |
         python3 << 'EOF'
@@ -106,8 +107,8 @@ jobs:
                         reviewers = get_pr_reviewers()
                         lines[i] = f"- Peer Review: {reviewers}"
                         updated = True
-                        print(f"Updated Peer Review in {file_path} at line {i + 1}")
-
+                        print(f"Updated Peer Reviewr in {file_path} at line {i + 1}")
+                        print(f"{reviewers}")
                 # Markdown 셀 실행 결과 추가
                 if updated:
                     first_cell.source = "\n".join(lines)
@@ -143,9 +144,10 @@ jobs:
         EOF
 
     - name: Commit and Push Changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --global user.name "${GITHUB_ACTOR}"
-        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/LangChain-OpenTutorial/LangChain-OpenTutorial.git
         git add -A
         git commit -m "Update Colab, GitHub links, and Peer Reviewers in notebooks" || echo "Nothing to commit"
-        git push
+        git push origin main
