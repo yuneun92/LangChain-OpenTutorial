@@ -25,7 +25,6 @@ __pycache__/
 
 # C extensions
 *.so
-
 .env
 
 # Distribution / packaging
@@ -188,4 +187,4 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-# End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python
+# End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks,pythonsettings.json
