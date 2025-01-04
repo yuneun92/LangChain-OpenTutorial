@@ -11,7 +11,7 @@ body:
       
       This template is intended **ONLY** for content-related issues such as **Typos or grammatical errors, Translation or interpretation improvements, Markdown formatting issues**.         
 
-- type: input
+- type: textarea
   id: url
   attributes:
     label: URL
@@ -23,18 +23,20 @@ body:
 - type: checkboxes
   id: content_checks
   attributes:
-    label: Content & Formatting Issues
-    description: Select all issues found in the tutorial.
+    label: Content & Formatting Issues  
+    description: Please review the tutorial and select all issues found in the tutorial.
     options:
-      - label: Typos present in the documentation. (YES/NO)
+      - label: 📝 Typos in the documentation 
         required: false
-      - label: Translation or interpretation improvements needed. (YES/NO)
+      - label: 🌍 Translation improvement needed
         required: false
-      - label: Grammar corrections required. (YES/NO)
+      - label: 📖 Grammar corrections needed
         required: false
-      - label: Markdown formatting issues found. (YES/NO)
+      - label: 🖋️ Markdown formatting issues
         required: false
-
+      - label: No issues found
+        required: false
+        
 - type: checkboxes
   id: checks
   attributes:
@@ -56,3 +58,7 @@ body:
       such as incorrect sentences, unclear explanations, or formatting problems.
       If possible, provide a suggested correction or improvement to the content.  
       You can also include revised text or formatting fixes.
+
+- type: textarea
+  attributes:
+    label: "Further Questions"
