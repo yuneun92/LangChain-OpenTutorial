@@ -2,13 +2,9 @@
   - Examples: "[E-3] 04-MODEL / 06-HuggingFace Endpoints", "[N-3] 04-MODEL / 06-HuggingFace Endpoints"
 
 - [ ] **(Optional) PR message**: a description of the changes
-- [ ] **(Optional) Related Issue**: If this PR has a related issue, mention the issue number. (e.g. Fixes #123)
+- [ ] **(Optional) Related Issue**: If this PR has a related issue, mention the issue number. (e.g. Fixes #123)
       
-Additional guidelines:   
-- ❌ Make sure no unnecessary files are committed. If unnecessary files (e.g., .bin, .gitignore, poetry.lock, pyproject.toml) are included, the PR must be closed immediately, and the author should reopen it after removal.
-- ❌ If the wrong file is uploaded or files are deleted (belongs to someone else), Close the PR immediately and create a new PR.
-- 💯 PR Submission & Push Deadline: Every Wednesday 23:59 (The first version must be submitted by Wednesday 23:59.) 
-  *If you have personal circumstances, inform the PM in advance. Failure to notify the PM before a delay (by Monday 23:59) may result in a penalty.
+- ❌ Do not include unnecessary files (e.g., .bin, .gitignore, poetry.lock, pyproject.toml) or other people's code. If included, close the PR and create a new PR.
 
 ### Reviewe Template (Intial PR)
 - ⚠️ Author: Before submitting a PR, ensure you have checked all the above points.    
