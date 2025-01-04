@@ -127,7 +127,7 @@ jobs:
       env:
         PAT: ${{ secrets.LT_SECRET_KEY }}
       run: |
-        git config --global user.name "langchainopentutorial " 
+        git config --global user.name "langchainopentutorial" 
         git config --global user.email "langchain.opentutorial@gmail.com"
         git remote set-url origin https://${PAT}@github.com/${{ github.repository }}.git
         git add -A
