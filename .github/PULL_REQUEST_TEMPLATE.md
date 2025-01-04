@@ -1,25 +1,16 @@
-Thank you for contributing to LangChain-OpenTutorial! 
-
-### Pull Request Template    
-Follow the template below when opening a PR.
-
 - [ ] **PR title**: "[Team] #-Chapter / #-File Name (without .ipynb extension)"
-  - Use "[Team] #-Chapter / #-File Name (without .ipynb extension)" for purely tutorial changes, "infra: ..." for CI changes.
-  - Examples
-    - Existing Team 3 (Team E): "[E-3] 04-MODEL / 06-HuggingFace Endpoints"
-    - New Team 2 (Team N): "[N-2] 07-Text Splitter / 02-RecursiveCharacterTextSplitter"
+  - Examples: "[E-3] 04-MODEL / 06-HuggingFace Endpoints", "[N-3] 04-MODEL / 06-HuggingFace Endpoints"
 
-- [ ] **PR message**: ***Delete this entire checklist*** and Replace the checklist with the following details only if applicable. (즉, 아래 부분은 작성하지 않으셔도 됩니다)
-    - **Description:** a description of the change
-    - **Issue:** If this PR has a related issue, mention the issue number. (e.g. Fixes #123)
+- [ ] **(Optional) PR message**: a description of the changes
+- [ ] **(Optional) Related Issue**: If this PR has a related issue, mention the issue number. (e.g. Fixes #123)
       
 Additional guidelines:   
-- ❌ Make sure no unnecessary files outside of the tutorial are committed. If unnecessary files (e.g., .bin, .gitignore, poetry.lock, pyproject.toml) are included, the PR must be closed immediately, and the author should reopen it after removal.
+- ❌ Make sure no unnecessary files are committed. If unnecessary files (e.g., .bin, .gitignore, poetry.lock, pyproject.toml) are included, the PR must be closed immediately, and the author should reopen it after removal.
 - ❌ If the wrong file is uploaded or files are deleted (belongs to someone else), Close the PR immediately and create a new PR.
 - 💯 PR Submission & Push Deadline: Every Wednesday 23:59 (The first version must be submitted by Wednesday 23:59.) 
   *If you have personal circumstances, inform the PM in advance. Failure to notify the PM before a delay (by Monday 23:59) may result in a penalty.
 
-### Review Template      
+### Reviewe Template (Intial PR)
 - ⚠️ Author: Before submitting a PR, ensure you have checked all the above points.    
 - ✅ Reviewers: Follow this review template when reviewing PRs.
 
