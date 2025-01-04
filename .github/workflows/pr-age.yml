@@ -2,12 +2,12 @@ name: pr-age
 
 on:
   schedule:
-    - cron: '0 0,3,9,15,21 * * *'   # (KST) 0:00, 6:00, 9:00, 12:00, 18:00
-    - cron: '38 8 * * *'           # (KST) 17:35
+    - cron: '30 0,3,9,15 * * *'  
   pull_request:
     types: [opened, synchronize, reopened]
-  pull_request_review:
-    types: [submitted]
+  # pull_request_review:
+  #   types: [submitted]
+  workflow_dispatch:
 
 permissions:
   pull-requests: write
@@ -21,6 +21,7 @@ jobs:
       - name: Check if 24 hours have passed since PR creation
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             // check 24-hours
             async function checkPrAge(pr) {
