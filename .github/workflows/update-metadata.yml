@@ -90,39 +90,22 @@ jobs:
                 colab_url = f"https://colab.research.google.com/github/{repo_url}/blob/{branch}/{file_path.replace(os.sep, '/')}"
                 github_badge = f"[![Open in GitHub](https://img.shields.io/badge/Open%20in%20GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/{repo_url}/blob/{branch}/{file_path.replace(os.sep, '/')})"
 
-                # 로그 출력
-                print(f"Generated Colab URL for {file_path}: {colab_url}")
-                print(f"Generated GitHub Badge for {file_path}: {github_badge}")
-
                 updated = False
                 for i, line in enumerate(lines):
                     # Open in Colab이 있는 라인에 Colab과 GitHub 뱃지를 추가
                     if "![Open in Colab]" in line:
                         lines[i] = f"[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]({colab_url}) {github_badge}"
                         updated = True
-                        print(f"Updated Colab and GitHub links in {file_path} at line {i + 1}")
 
                     # Peer Review 업데이트
                     if line.startswith("- Peer Review:"):
                         reviewers = get_pr_reviewers()
                         lines[i] = f"- Peer Review: {reviewers}"
                         updated = True
-                        print(f"Updated Peer Reviewr in {file_path} at line {i + 1}")
-                        print(f"{reviewers}")
-                # Markdown 셀 실행 결과 추가
+
                 if updated:
                     first_cell.source = "\n".join(lines)
-                    first_cell.execution_count = 1
-                    first_cell.outputs = [
-                        {
-                            "output_type": "display_data",
-                            "data": {"text/markdown": first_cell.source},
-                            "metadata": {}
-                        }
-                    ]
-                    print(f"Executed first Markdown cell in {file_path}")
 
-            # 파일 저장
             with open(file_path, "w", encoding="utf-8") as file:
                 nbformat.write(notebook, file)
 
@@ -131,26 +114,22 @@ jobs:
             변경된 .ipynb 파일만 업데이트
             """
             changed_files = get_changed_files()
-            print(f"Changed .ipynb files: {changed_files}")
-
             for file_path in changed_files:
-                print(f"Processing {file_path}...")
                 update_and_execute_markdown_cell(file_path, repo_url, branch)
 
         if __name__ == "__main__":
-            REPO_URL = "LangChain-OpenTutorial/LangChain-OpenTutorial"  # 실제 GitHub 저장소 정보
-            BRANCH = "main"  # 브랜치 이름
+            REPO_URL = "LangChain-OpenTutorial/LangChain-OpenTutorial"
+            BRANCH = "main"
             process_changed_notebooks(REPO_URL, BRANCH)
         EOF
 
-- name: Commit and Push Changes
-  env:
-    PAT: ${{ secrets.LT_SECRET_KEY }} # LT_SECRET_KEY로 PAT를 환경 변수로 설정
-  run: |
-    git config --global user.name "${GITHUB_ACTOR}" 
-    git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-    git remote set-url origin https://${PAT}@github.com/${{ github.repository }}.git
-    git add -A
-    git commit -m "Update Colab, GitHub links, and Peer Reviewers in notebooks" || echo "Nothing to commit"
-    git push origin main
-
+    - name: Commit and Push Changes
+      env:
+        PAT: ${{ secrets.LT_SECRET_KEY }}
+      run: |
+        git config --global user.name "${GITHUB_ACTOR}" 
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git remote set-url origin https://${PAT}@github.com/${{ github.repository }}.git
+        git add -A
+        git commit -m "Update Colab, GitHub links, and Peer Reviewers in notebooks" || echo "Nothing to commit"
+        git push origin main
