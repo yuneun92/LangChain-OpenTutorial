@@ -9,10 +9,7 @@ body:
     value: >
       Thank you for taking the time to report an issue with the documentation.  
       
-      This template is intended **ONLY** for content-related issues such as:    
-      - Typos or grammatical errors     
-      - Translation or interpretation improvements      
-      - Markdown formatting issues       
+      This template is intended **ONLY** for content-related issues such as **Typos or grammatical errors, Translation or interpretation improvements, Markdown formatting issues**.         
 
 - type: input
   id: url
