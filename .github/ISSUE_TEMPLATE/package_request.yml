@@ -7,13 +7,13 @@ body:
   - type: markdown
     attributes:
       value: >
-        This is a form to request adding a new package.
+        This form is used to request the addition of a new package to the project.
         
   - type: input
     id: package_name
     attributes:
       label: Package Name
-      description: Please enter the name of the package you are requesting to add. Only one package can be entered. If multiple packages are needed, please create a separate issue for each package.
+      description: Enter the name of the package you are requesting to add. Only one package can be requested per issue. If you need multiple packages, please create a separate issue for each one.
       placeholder: "pandas"
     validations:
       required: true
@@ -22,7 +22,7 @@ body:
     id: version
     attributes:
       label: (Optional) Version
-      description:  Please specify if a particular version is required.
+      description: Specify a required version if necessary. If no version is provided, the latest available version will be used.
       placeholder: "1.5.0"
     validations:
       required: false
@@ -33,9 +33,9 @@ body:
       label: Checklist
       description: Please confirm and check all the following items.
       options:
-        - label: I confirmed that the package name is correct.
+        - label: I have confirmed that the package name is correct.
           required: true
-        - label: I entered only one package name.
+        - label: I have entered only one package name.
           required: true
-        - label: I specified if a particular version is required. (If no version is specified, the latest version will be applied.)
+        - label:  I have specified a required version if necessary. (If no version is provided, the latest version will be used.) 
           required: true
