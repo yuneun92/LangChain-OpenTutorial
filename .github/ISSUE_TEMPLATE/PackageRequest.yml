@@ -13,7 +13,7 @@ body:
     id: package_name
     attributes:
       label: (필수) 패키지명
-      description: 추가를 요청하는 패키지의 이름을 입력해주세요.
+      description: 추가를 요청하는 패키지의 이름을 입력해주세요. 한 개만 입력 가능하며, 여러 패키지가 필요한 경우 개별 패키지마다 이슈를 작성해주세요.
       placeholder: "pandas"
     validations:
       required: true
