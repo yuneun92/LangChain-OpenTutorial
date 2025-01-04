@@ -22,11 +22,11 @@ Additional guidelines:
 🔍 Review Guidelines
 🖥️ Review OS: Mac
 ✅ Checklist
- - [ ] Template Rule Compliance: Ensured that the PR follows the template guidelines. (YES/NO)
- - [ ] Table of Contents Links: Verified that all links in the Table of Contents work correctly. (YES/NO)
- - [ ] Image Naming Compliance: Checked if all included images follow the naming guidelines. (YES/NO)
- - [ ] Import Statements: Confirmed that all import statements use the latest version instead of legacy formats. (YES/NO)
- - [ ] Code Execution: Verified that all code runs without errors. If warnings occur, mention them in the comments. (YES/NO)
+ - [ ] **Template Rule Compliance**: Ensured that the PR follows the template guidelines. (YES/NO)
+ - [ ] **Table of Contents Links**: Verified that all links in the Table of Contents work correctly. (YES/NO)
+ - [ ] **Image Naming Compliance**: Checked if all included images follow the naming guidelines. (YES/NO)
+ - [ ] **Import Statements**: Confirmed that all import statements use the latest version instead of legacy formats. (YES/NO)
+ - [ ] **Code Execution**: Verified that all code runs without errors. If warnings occur, mention them in the comments. (YES/NO)     
 💬 Additional Comments (Provide any additional feedback or suggestions here.)
 
 If no one reviews your PR within a few days, please @-mention one of teddylee777, musangk, BAEM1N
