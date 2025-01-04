@@ -131,4 +131,5 @@ jobs:
         git config --global user.email "langchain.opentutorial@gmail.com"
         git add -A
         git commit -m "Update Colab, GitHub links, and Peer Reviewers in notebooks" || echo "Nothing to commit"
-        git push origin main
+        git push origin main --force-with-lease
+
