@@ -1,23 +1,21 @@
-- [ ] **PR title**: "[Team] #-Chapter / #-File Name (without .ipynb extension)"
-  - Examples: "[E-3] 04-MODEL / 06-HuggingFace Endpoints", "[N-3] 04-MODEL / 06-HuggingFace Endpoints"
+{PR Message - Write freely, remove this bracket if unnecessary}
 
-- [ ] **(Optional) PR message**: a description of the changes
-- [ ] **(Optional) Related Issue**: If this PR has a related issue, mention the issue number. (e.g. Fixes #123)
+### Author Checklist
+- [ ] **PR Title Format**: I have confirmed that the PR title follows the correct format. _(e.g., [N-2] 07-Text Splitter / 07-RecursiveCharacterTextSplitter)_
+- [ ] **Committed Files**: I have ensured that no unnecessary files _(e.g., .bin, .gitignore, poetry.lock, pyproject.toml)_ are included. These files are not allowed.
+- [ ] **(Optional) Related Issue**: If this PR is linked to an issue, I have referenced the issue number in the PR message. _(e.g., Fixes #123)_
       
 - ❌ Do not include unnecessary files (e.g., .bin, .gitignore, poetry.lock, pyproject.toml) or other people's code. If included, close the PR and create a new PR.
 
-### Reviewe Template (Intial PR)
-- ⚠️ Author: Before submitting a PR, ensure you have checked all the above points.    
-- ✅ Reviewers: Follow this review template when reviewing PRs.
-
+### Review Template (Intial PR)
 ```markdown
-🖥️ Review OS: Win/Mac/Linux   
+🖥️ OS: Win/Mac/Linux   
 ✅ Checklist      
- - [ ] **Template Rule Compliance**: Ensured that the PR follows the template guidelines. (YES/NO)
- - [ ] **Table of Contents Links**: Verified that all links in the Table of Contents work correctly. (YES/NO)
- - [ ] **Image Naming Compliance**: Checked if all included images follow the naming guidelines. (YES/NO)
- - [ ] **Import Statements**: Confirmed that all import statements use the latest version instead of legacy formats. (YES/NO)
- - [ ] **Code Execution**: Verified that all code runs without errors. If warnings occur, mention them in the comments. (YES/NO)     
- - 기타의견: {자유롭게 서술, 한국어 기술 가능}     
+ - [ ] **Template**: Tutorials follows the required template. 
+ - [ ] **Table of Contents(TOC) Links**: All Table of Contents links work. ((Yes/No)
+ - [ ] **Image**: Image filenames follow guidelines.
+ - [ ] **Imports*: All import statements use the latest versions. Ensure "langchain-teddynote" is not used. 
+ - [ ] **Code Execution**: Code runs without errors.
+ - Comments: {Write freely, 한국어 기술 가능}     
 ```
 If no one reviews your PR within a few days, please @-mention one of teddylee777, musangk, BAEM1N
