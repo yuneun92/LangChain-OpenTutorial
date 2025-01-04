@@ -19,9 +19,9 @@ Additional guidelines:
   *If you have personal circumstances, inform the PM in advance. Failure to notify the PM before a delay (by Monday 23:59) may result in a penalty.
 
 
-🔍 Review Guidelines
-🖥️ Review OS: Mac
-✅ Checklist
+🔍 Review Guidelines    
+🖥️ Review OS: Win/Mac/Linux
+✅ Checklist    
  - [ ] **Template Rule Compliance**: Ensured that the PR follows the template guidelines. (YES/NO)
  - [ ] **Table of Contents Links**: Verified that all links in the Table of Contents work correctly. (YES/NO)
  - [ ] **Image Naming Compliance**: Checked if all included images follow the naming guidelines. (YES/NO)
