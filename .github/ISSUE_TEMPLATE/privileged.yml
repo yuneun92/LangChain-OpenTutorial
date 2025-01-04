@@ -6,7 +6,7 @@ body:
       value: |
         Thanks for your interest in LangChain-OpenTutorial! 🚀
         
-        If you are not a LangChain maintainer or were not asked directly by a maintainer to create an issue, then please start the conversation in a "[01-qna-자유대화 in discord](https://discord.com/channels/1314137385881047110/1317511768008036422)" instead.
+        If you are not a LangChain maintainer(or admin) or were not asked directly by a maintainer(or admin) to create an issue, then please start the conversation in a "[01-qna-자유대화 in discord](https://discord.com/channels/1314137385881047110/1317511768008036422)" instead.
       
   - type: checkboxes
     id: privileged
