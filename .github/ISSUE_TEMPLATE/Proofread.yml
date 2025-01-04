@@ -9,24 +9,25 @@ body:
     value: >
       Thank you for taking the time to report an issue with the documentation.  
       
-      This template is intended **ONLY** for content-related issues such as:  
-      - Typos or grammatical errors  
-      - Translation or interpretation improvements  
-      - Markdown formatting issues  
+      This template is intended **ONLY** for content-related issues such as:    
+      - Typos or grammatical errors     
+      - Translation or interpretation improvements      
+      - Markdown formatting issues       
 
 - type: input
   id: url
   attributes:
     label: URL
     description: Provide the URL of the documentation page where the issue occurs.
+    placeholder: "https://github.com/LangChain-OpenTutorial/LangChain-OpenTutorial/blob/main/06-DocumentLoader/01-Document-Loader.ipynb"
   validations:
     required: true
 
 - type: checkboxes
   id: content_checks
   attributes:
-    label: Content & Formatting Checks
-    description: Please indicate which type of issue applies.
+    label: Content & Formatting Issues
+    description: Select all issues found in the tutorial.
     options:
       - label: Typos present in the documentation. (YES/NO)
         required: false
