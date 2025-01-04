@@ -26,13 +26,13 @@ body:
     label: Content & Formatting Issues  
     description: Please review the tutorial and select all issues found in the tutorial.
     options:
-      - label: 📝 Typos in the documentation 
+      - label: 📝 Typos: Errors in spelling within the documentation.
         required: false
-      - label: 🌍 Translation improvement needed
+      - label: 🌍 Translation: Improvements needed in the translated versions.
         required: false
-      - label: 📖 Grammar corrections needed
+      - label: 📖 Grammar: Corrections required for grammatical errors.
         required: false
-      - label: 🖋️ Markdown formatting issues
+      - label: 🖋️ Formatting: Issues with Markdown formatting.
         required: false
       - label: No issues found
         required: false
@@ -43,11 +43,11 @@ body:
     label: Checklist
     description: Please confirm and check all applicable options before submitting.
     options:
-      - label: I provided a clear and descriptive title for this issue.
+      - label: I have provided a clear and descriptive title for this issue.
         required: true
-      - label: I included a link to the affected documentation page.
+      - label: I have included a link to the affected documentation page.
         required: true
-      - label: This issue is related to content (typos, translation, formatting) and not code functionality.
+      - label: This issue relates to content (typos, translation, or formatting), not code functionality.
         required: true
 
 - type: textarea
