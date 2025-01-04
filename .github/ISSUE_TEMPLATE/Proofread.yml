@@ -26,13 +26,13 @@ body:
     label: Content & Formatting Issues  
     description: Please review the tutorial and select all issues found in the tutorial.
     options:
-      - label: 📝 **Typos** Errors in spelling within the documentation.
+      - label: 📝 **Typos** - Errors in spelling within the documentation.
         required: false
-      - label: 🌍 **Translation** Improvements needed in the translated versions.
+      - label: 🌍 **Translation** - Improvements needed in the translated versions.
         required: false
-      - label: 📖 **Grammar** Corrections required for grammatical errors.
+      - label: 📖 **Grammar** - Corrections required for grammatical errors.
         required: false
-      - label: 🖋️ **Formatting** Issues with Markdown formatting.
+      - label: 🖋️ **Formatting** - Issues with Markdown formatting.
         required: false
       - label: No issues found
         required: false
