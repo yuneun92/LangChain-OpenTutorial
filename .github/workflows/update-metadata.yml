@@ -127,8 +127,8 @@ jobs:
       env:
         PAT: ${{ secrets.LT_SECRET_KEY }}
       run: |
-        git config --global user.name "${GITHUB_ACTOR}" 
-        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git config --global user.name "langchainopentutorial " 
+        git config --global user.email "langchain.opentutorial@gmail.com"
         git remote set-url origin https://${PAT}@github.com/${{ github.repository }}.git
         git add -A
         git commit -m "Update Colab, GitHub links, and Peer Reviewers in notebooks" || echo "Nothing to commit"
