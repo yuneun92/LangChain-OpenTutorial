@@ -38,11 +38,11 @@ This comprehensive resource aims to provide both new and existing users with up-
 
 
 ### Related Links
-- [Dashboard](https://docs.google.com/spreadsheets/d/1Kt7BiKyuAoQeIks1v1V2ii6ri5WJqWZ1fS_oe0z4nsM/edit?gid=1162559766#gid=1162559766)
 - [GitHub Collaboration Guide](https://docs.google.com/document/d/18VrmTq1o22rzjxZ4PEFaemo0lfXRK9vWsyQPEin7OfY/edit?tab=t.0#heading=h.il7lst7f5t57)
 - [Github PR Example](https://github.com/LangChain-OpenTutorial/LangChain-OpenTutorial/pull/5)
 - [meeting_1_kickoff](https://drive.google.com/file/d/1TqVonuyda6gnJkdSc-XpsqE6JkTmjquZ/view?usp=drive_link)
 - [meeting_2_241228](https://docs.google.com/presentation/d/1xVJXCKV9OC4kQk3VKWL79KHitxcX-Mjj/edit#slide=id.p6)
+- [meeting_3_250104](https://docs.google.com/presentation/d/1xVJXCKV9OC4kQk3VKWL79KHitxcX-Mjj/edit#slide=id.p6)
 
 ## 🌟 Contributors
 [![Contributors](https://contrib.rocks/image?repo=LangChain-OpenTutorial/LangChain-OpenTutorial&max=5000)](https://github.com/LangChain-OpenTutorial/LangChain-OpenTutorial/graphs/contributors)
