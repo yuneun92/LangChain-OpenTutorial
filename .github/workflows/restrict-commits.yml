@@ -25,7 +25,9 @@ jobs:
 
         # 사용자명 검증
         if [[ ! " ${ALLOWED_USERS[@]} " =~ " ${PUSH_ACTOR} " ]]; then
-          echo "Unauthorized push by $PUSH_ACTOR"
+          echo "❌ Unauthorized push by $PUSH_ACTOR"
+          echo "This commit will not be accepted into the repository."
           exit 1
         fi
-        echo "Push authorized for $PUSH_ACTOR"
+
+        echo "✅ Push authorized for $PUSH_ACTOR"
