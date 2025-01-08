@@ -31,3 +31,6 @@ langchain-mongodb
 fastembed
 certifi
 python-magic-bin
+pymongo
+langchain_qdrant
+
