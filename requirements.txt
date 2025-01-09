@@ -30,7 +30,8 @@ langchain-neo4j
 langchain-mongodb
 fastembed
 certifi
-python-magic-bin
 pymongo
 langchain_qdrant
 
+# python-magic-bin 설치 제한 (macOS에서 제외)
+python-magic-bin; sys_platform != "darwin"
