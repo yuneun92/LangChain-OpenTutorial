@@ -102,7 +102,9 @@ set_env(
 )
 ```
 <pre class="custom">Environment variables have been set successfully.
-</pre>You can alternatively set `OPENAI_API_KEY` in `.env` file and load it. 
+</pre>
+
+You can alternatively set `OPENAI_API_KEY` in `.env` file and load it. 
 
 [Note] This is not necessary if you've already set `OPENAI_API_KEY` in previous steps.
 
