@@ -33,12 +33,12 @@ This tutorial provides a comprehensive guide to major `Large Language Models (LL
 ### Table of Contents
 
 - [Overview](#overview)
-- [OpenAI GPT Series](#openai-gpt-series)
-- [Meta Llama Series](#meta-llama-series)
-- [Anthropic Claude Series](#anthropic-claude-series)
-- [Google Gemini Series](#google-gemini-series)
-- [Mistral AI models Series](#mistral-ai-models-series)
-- [Alibaba Qwen Series](#alibaba-qwen-series)
+- [OpenAI GPT Series](#openai---gpt-series)
+- [Meta Llama Series](#meta---llama-series)
+- [Anthropic Claude Series](#anthropic---claude-series)
+- [Google Gemini Series](#google---gemini)
+- [Mistral AI models Series](#mistral-ai-models-overview)
+- [Alibaba Qwen Series](#alibaba---qwen)
 
 
 ### References
@@ -48,8 +48,7 @@ This tutorial provides a comprehensive guide to major `Large Language Models (LL
 - [Google’s models overview](https://ai.google.dev/gemini-api/docs/models/gemini).
 - [Mistral's models overview](https://mistral.ai/technology/#models).
 - [Alibaba Cloud’s models overview](https://mistral.ai/technology/#models).
-
-----
+---
 
 ## OpenAI - GPT Series
 
@@ -98,6 +97,8 @@ GPT models by OpenAI are advanced transformer-based language models designed for
 
 For more detailed information, please refer to [OpenAI's official documentation](https://platform.openai.com/docs/models#models-overview).
 
+---
+
 ## Meta - Llama Series
 
 Meta's Llama AI series offers open-source models that allow fine-tuning, distillation, and flexible deployment.
@@ -133,14 +134,9 @@ Meta's Llama AI series offers open-source models that allow fine-tuning, distill
 - Pre-trained on 15 trillion tokens
 - Fine-tuned through Supervised Fine-tuning (SFT) and RLHF
 
-   > **Supervised Fine-tuning** : Supervised fine-tuning is a process of improving an existing AI model's performance by training it with labeled data. For example, if you want to teach the model text summarization, you provide pairs of 'original text' and 'summarized text' as training data. Through this training with correct answer pairs, the model can enhance its performance on specific tasks.
-   >
-   > **Reinforcement Learning with Human Feedback (RLHF)** : RLHF is a method where AI models learn to generate better responses through human feedback. When the AI generates responses, humans evaluate them, and the model improves based on these evaluations. Just like a student improves their skills through teacher feedback, AI develops to provide more ethical and helpful responses through human feedback.
-   
-**Use Cases**  
-
 For more detailed information, please refer to [Meta's official documentation](https://www.llama.com/).
 
+---
 
 ## Anthropic - Claude Series
 
@@ -174,6 +170,7 @@ Claude models by Anthropic are advanced language models with cloud-based APIs fo
 
 For more detailed information, please refer to [Anthropic's official documentation](https://docs.anthropic.com/en/docs/intro-to-claude).
 
+---
 
 ## Google - Gemini
 
@@ -202,6 +199,8 @@ Google's Gemini models prioritize efficiency and scalability, designed for a wid
 
 For more detailed information, refer to [Google's Gemini documentation](https://ai.google.dev/gemini-api/docs/models/gemini).
 
+---
+
 ## Mistral AI Models Overview
 
 Mistral AI provides commercial and open-source models for diverse NLP tasks, including specialized solutions.
@@ -219,6 +218,7 @@ Mistral AI provides commercial and open-source models for diverse NLP tasks, inc
 
 For more detailed information, please refer to [Mistral's official documentation](https://mistral.ai/technology/#models).
 
+---
 
 ## Alibaba - Qwen
 
@@ -239,3 +239,9 @@ Alibaba’s Qwen models offer open-source and commercial variants optimized for 
 - Applications in generative AI, such as writing, image generation, and audio analysis
 
 For more detailed information, visit [Alibaba Cloud’s official Qwen page](https://mistral.ai/technology/#models).
+
+
+
+
+
+
