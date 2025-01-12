@@ -30,18 +30,17 @@ pre {
 
 ## Overview
 
-[`arXiv`](https://arxiv.org/) is an open access archive for 2 million scholarly articles in the fields of physics, 
+[arXiv](https://arxiv.org/) is an open access archive for 2 million scholarly articles in the fields of physics, 
 
 mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering and systems 
 
 science, and economics.
 
-[API Documentation](https://api.python.langchain.com/en/latest/document_loaders/langchain_community.document_loaders.arxiv.ArxivLoader.html#langchain_community.document_loaders.arxiv.ArxivLoader)
-
+[![API Documentation](https://img.shields.io/badge/API%20Documentation-arXiv-blue)](https://info.arxiv.org/help/api/index.html)
 
 To access the Arxiv document loader, you need to install `arxiv`, `PyMuPDF` and `langchain-community` integration packages.
 
-`PyMuPDF` converts PDF files downloaded from arxiv.org into text format.
+PyMuPDF converts PDF files downloaded from arxiv.org into text format.
 
 
 ### Table of Contents
@@ -59,8 +58,6 @@ To access the Arxiv document loader, you need to install `arxiv`, `PyMuPDF` and 
 - [ArxivLoader API Documentation](https://python.langchain.com/api_reference/community/document_loaders/langchain_community.document_loaders.arxiv.ArxivLoader.html#langchain_community.document_loaders.arxiv.ArxivLoader)
 - [Arxiv API Acess Documentation](https://info.arxiv.org/help/api/index.html)
 
----
-
 ## Environment Setup
 
 Set up the environment. You may refer to [Environment Setup](https://wikidocs.net/257836) for more details.
@@ -71,7 +68,7 @@ Set up the environment. You may refer to [Environment Setup](https://wikidocs.ne
 
 ```python
 %%capture --no-stderr
-%pip install langchain-opentutorial
+!pip install langchain-opentutorial
 ```
 
 ```python
@@ -99,7 +96,7 @@ package.install(
 You can make arxiv loader instance to load documents from arxiv.org.
 
 Initialize with search query to find documents in the Arixiv.org.
-Supports all arguments of `ArxivAPIWrapper` .
+Supports all arguments of `ArxivAPIWrapper`.
 
 ```python
 from langchain_community.document_loaders import ArxivLoader
@@ -114,7 +111,7 @@ loader = ArxivLoader(
 
 ### Load
 
-Use `Load` method to load documents from arxiv.org with `ArxivLoader` instance.
+Use `Load` method to load documents from arxiv.org. with ArxivLoader instance.
 
 ```python
 # Print the first document's content and metadata

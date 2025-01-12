@@ -20,7 +20,9 @@ pre {
 # LCEL (Remembering Conversation History): Adding Memory
 
 - Author: [Heeah Kim](https://github.com/yellowGangneng)
-- Peer Review : [Sungchul Kim](https://github.com/rlatjcj), [Jongwon Seo](https://github.com/3dkids)
+- Author: [Heeah Kim](https://github.com/yellowGangneng)
+- Peer Review : [MinJi Kang](https://www.linkedin.com/in/minji-kang-995b32230/)
+- Peer Review : [MinJi Kang](https://www.linkedin.com/in/minji-kang-995b32230/)
 - This is a part of [LangChain Open Tutorial](https://github.com/LangChain-OpenTutorial/LangChain-OpenTutorial)
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LangChain-OpenTutorial/LangChain-OpenTutorial/blob/main/05-Memory/08-LCEL-add-memory.ipynb) [![Open in GitHub](https://img.shields.io/badge/Open%20in%20GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/LangChain-OpenTutorial/LangChain-OpenTutorial/blob/main/05-Memory/08-LCEL-add-memory.ipynb)
@@ -29,15 +31,15 @@ pre {
 
 This tutorial demonstrates how to add memory to arbitrary chains using `LCEL`.
 
-The `LangChain Expression Language (LCEL)` takes a declarative approach to building new `Runnables` from existing `Runnables`. For more details about LCEL, please refer to the References below.
+The `LangChain Expression Language (LCEL)` takes a declarative approach to building new Runnables from existing Runnables. For more details about LCEL, please refer to the References below.
 
 ### Table of Contents
 
 - [Overview](#overview)
-- [Environment Setup](#environment-setup)
-- [Initializing Model and Prompt](#initializing-model-and-prompt)
-- [Creating Memory](#creating-memory)
-- [Adding Memory to Chain](#adding-memory-to-chain)
+- [Environement Setup](#environment-setup)
+- [Initialize Model and Prompt](#initialize-model-and-prompt)
+- [Create Memory](#create-memory)
+- [Add Memory to Chain](#add-memory-to-chain)
 - [Example Implementation of a Custom ConversationChain](#example-implementation-of-a-custom-conversationChain)
 
 ### References
@@ -56,7 +58,7 @@ Set up the environment. You may refer to [Environment Setup](https://wikidocs.ne
 
 ```python
 %%capture --no-stderr
-%pip install langchain-opentutorial
+!pip install langchain-opentutorial
 ```
 
 ```python
@@ -92,7 +94,7 @@ set_env(
 <pre class="custom">Environment variables have been set successfully.
 </pre>
 
-Alternatively, environment variables can also be set using a `.env` file.
+Alternatively, environment variables can also be set using a .env file.
 
 **[Note]**
 
@@ -101,7 +103,7 @@ Alternatively, environment variables can also be set using a `.env` file.
 ```python
 from dotenv import load_dotenv
 
-load_dotenv(override=True)
+load_dotenv()
 ```
 
 
@@ -111,7 +113,7 @@ load_dotenv(override=True)
 
 
 
-## Initializing Model and Prompt
+## Initialize Model and Prompt
 
 Now, let's start to initialize the model and the prompt we'll use.
 
@@ -126,7 +128,7 @@ from langchain_openai import ChatOpenAI
 # Initialize Model
 model = ChatOpenAI()
 
-# Generate a conversational prompt. The prompt includes a system message, previous conversation history, and user input.
+# Generating a conversational prompt. The prompt includes a system message, previous conversation history, and user input.
 prompt = ChatPromptTemplate.from_messages(
     [
         ("system", "You are a helpful chatbot"),
@@ -136,12 +138,12 @@ prompt = ChatPromptTemplate.from_messages(
 )
 ```
 
-## Creating Memory
+## Create Memory
 
 Create a `ConversationBufferMemory` to store conversation history.
 
-- `return_messages` : When set to **True**, it returns `HumanMessage` and `AIMessage` objects.
-- `memory_key`: The key that will be substituted into the Chain's **prompt** later. This can be modified as needed.
+- `return_messages` : When set to `True`, it returns `HumanMessage` and `AIMessage` objects.
+- `memory_key`: The key that will be substituted into the Chain's `prompt` later. This can be modified as needed.
 
 ```python
 # Create a ConversationBufferMemory and enable the message return feature.
@@ -194,11 +196,11 @@ runnable.invoke({"input": "hi"})
 
 
 
-Since `RunnablePassthrough.assign` is used, the returned value is a combination of the input and the additional arguments provided to the function.
+Since `RunnablePassthrough.assign` is used, the return value is the combined value of the input and the additional arguments provided to the function.
 
 In this case, the key of the additional argument is `chat_history`. The value corresponds to the part of the result of `memory.load_memory_variables` executed through `RunnableLambda` that is extracted by `itemgetter` using the `chat_history` key.
 
-## Adding Memory to Chain
+## Add Memory to Chain
 
 Let's add memory to the chain using LCEL.
 
@@ -222,8 +224,8 @@ Using the `memory.save_context` function, the user's query (`input`) and the AI'
 This stored memory can be used to record the current state during the model learning process or to track user requests and system responses.
 
 ```python
-# The input data and response content are saved to the memory.
-# Here, it is 'Heeah', but try inserting your name!
+# The input data and response content are saved to memory.
+# Here, it is Heeah, but try inserting your name!
 memory.save_context(
     {"human": "Nice to see you. My name is Heeah."}, {"ai": response.content}
 )
@@ -240,7 +242,7 @@ memory.load_memory_variables({})
 
 
 
-Shall we find out if the model correctly remembers your name through memory?
+Shall we find out if GPT correctly remembers your name through memory?
 
 ```python
 response = chain.invoke({"input": "Do you remember my name?"})
@@ -254,7 +256,7 @@ Remembering well! This means that the memory connected using LCEL is working cor
 
 ## Example Implementation of a Custom `ConversationChain`
 
-Let's create our own custom `ConversationChain`!
+Let's create my own Custom ConversationChain!
 
 ```python
 from operator import itemgetter
@@ -277,13 +279,13 @@ prompt = ChatPromptTemplate.from_messages(
 
 memory = ConversationBufferMemory(return_messages=True, memory_key="chat_history")
 
-# If you want to use the summary memory that you learned in Chapter 6:
+# If you want to use the summary memory that you learned in Chapter 6?
 # memory = ConversationSummaryMemory(
 #     llm=llm, return_messages=True, memory_key="chat_history"
 # )
 
 
-# Let's build our own ConversationChain!
+# Let's build my own ConversationChain!
 class MyConversationChain(Runnable):
 
     def __init__(self, llm, prompt, memory, input_key="input"):
@@ -307,14 +309,14 @@ class MyConversationChain(Runnable):
         answer = self.chain.invoke({self.input_key: query})
         self.memory.save_context(
             inputs={"human": query}, outputs={"ai": answer}
-        )  # Store the conversation history directly in the memory.
+        )  # Store the conversation history directly in memory.
         return answer
 
 
 conversation_chain = MyConversationChain(llm, prompt, memory)
 ```
 
-Let's do something interesting using our custom `ConversationChain`!
+Let's do something interesting using our Custom ConversationChain!
 
 ```python
 conversation_chain.invoke(
@@ -366,10 +368,10 @@ conversation_chain.invoke(
 
 
 
-Although we managed to throw him off a bit at the end, we were able to confirm that he remembered my name until the last moment.<br>
+Although I managed to throw him off a bit at the end, I was able to confirm that he remembered my name until the last moment.<br>
 He is indeed a remarkable pirate!🏴‍☠️⚓
 
-At any rate, the journey we have shared so far, as stored in the memory, is as follows.
+At any rate, the journey we have shared so far, as stored in memory, is as follows.
 
 ```python
 conversation_chain.memory.load_memory_variables({})["chat_history"]
@@ -389,6 +391,6 @@ conversation_chain.memory.load_memory_variables({})["chat_history"]
 
 
 
-Now, create your own journey using the custom `ConversationChain` with LCEL! 
+Now, create your own journey using the Custom ConversationChain with LCEL! 
 
 Thank you for your hard work!🎉🎉🎉
