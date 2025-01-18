@@ -133,16 +133,6 @@ def convert_to_kst(utc_time_str):
     kst_time = utc_time + timedelta(hours=9)  # 9시간 더하기
     return kst_time.strftime("%Y-%m-%d %H:%M:%S")  # 원하는 포맷으로 변환
 
-df = pd.read_json("pr_review_data.json")
-
-df["PR Create Time (KST)"] = df["PR Create Time"].apply(convert_to_kst)
-df["PR Last Update Time (KST)"] = df["PR Last Update Time"].apply(convert_to_kst)
-df["Review Create Time (KST)"] = df["Review Create Time"].apply(convert_to_kst)
-
-df.to_csv("df.csv", encoding='utf-8-sig')
-print(df)
-
-
 # main
 if __name__ == "__main__":
 
